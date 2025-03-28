@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import { colors, objClient } from "../../styles/variables";
-
 type Props = { 
-    tipoBotao: "" | "submit"
+    tipoBotao: "reset" | "submit"
 } 
 
-export const Button = styled.button<Props>`
+export const FormButton = styled.button<Props>`
     padding: 8px;
     border-radius: 10px;
     border: ${(props) => props.tipoBotao === "submit" ? "none" : "2px groove #E5843C" };
@@ -22,8 +21,50 @@ export const Button = styled.button<Props>`
     
     &:hover {
     background: linear-gradient(to right, ${colors.orange}, ${colors.bluelight}); // Cor degradê ao passar o mouse
-    transition: 0.1; // Transição suave para o background: ;
+    transition: ease 1s; // Transição suave para o background: ;
     color: aliceblue;
 
 }
 `;
+
+export const Button = styled.a`
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 8px;
+    background: ${colors.orange};
+    color: ${colors.white};
+    font-weight: bold;
+    width: 120px;
+    margin-top: 20px;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    scale: 0.9;
+    transition: ease 0.4s;
+    text-decoration: none;
+    animation: fadeIn 3s ease-in-out; /* Animação aplicada diretamente */
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    &:hover{
+        background: linear-gradient(to right, ${colors.orange}, ${colors.bluelight}); // Cor degradê ao passar o mouse
+        transition: ease 1s;
+
+
+    }
+
+    
+
+`

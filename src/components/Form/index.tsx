@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import Input from '../Input/index.tsx';
 import Label from '../Label/index.tsx';
 import { Select } from '../Input/index.tsx';
-import { Button } from '../Button/index.tsx';
+import { FormButton } from '../Button/index.tsx';
 import FormStyle from './styles';
 import { objClient } from '../../styles/variables.tsx';
 
@@ -55,23 +55,7 @@ const Reset = () => {
   // Máscara para telefone fixo
   const mascaraFixo = (value) => {
     const valor = value.replace(/\D/g, '');
-    if (valor.length <= 10) {
-      return valor.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
-    } else {
-      // Se o número de dígitos for maior que 10, limpa o campo
-      setFormData(prev => ({
-        ...prev,
-        telefoneFixo: '', // Limpa o campo de telefone fixo
-      }));
-      // Exibir mensagem de erro com Swal
-      Swal.fire({
-        title: 'Erro!',
-        text: 'Número de telefone fixo inválido. Deve ter no máximo 10 dígitos.',
-        icon: 'error',
-        confirmButtonText: 'Ok',
-      });
-      return ''; // Retorna vazio para o input
-    }
+    return valor.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
   };
 
   // Atualiza o estado ao digitar
@@ -161,6 +145,7 @@ const Reset = () => {
         width: 800,
         showCancelButton: true,
         confirmButtonText: 'Copiar',
+        confirmButtonColor: "#0762C8",
         cancelButtonText: 'Fechar',
         customClass: {
         htmlContainer: 'swal-signature-container', 
@@ -176,6 +161,7 @@ const Reset = () => {
                 title: 'Assinatura Copiada!',
                 text: 'A assinatura foi copiada para a área de transferência.',
                 icon: 'success',
+                confirmButtonColor: "#0762C8"
               });
             })
             .catch(() => {
@@ -226,7 +212,7 @@ const Reset = () => {
           required
           value={formData.telefoneFixo}
           onChange={handleInputChange}
-          maxLength={10}
+          maxLength={12}
         />
       </Label>
 
@@ -282,8 +268,8 @@ const Reset = () => {
           <option value="Av. Carlos Augusto Tinoco Garcia, 419, Riviera Fluminense, Macaé – RJ">Matriz Macaé-RJ</option>
         </Select>
       </Label>
-      <Button tipoBotao='' onClick={Reset} type='reset'>Limpar Campos</Button>
-      <Button tipoBotao='submit' type='submit'>Gerar</Button>
+      <FormButton tipoBotao='reset' onClick={Reset} type='reset'>Limpar Campos</FormButton>
+      <FormButton tipoBotao='submit' type='submit'>Gerar</FormButton>
       
     </FormStyle>
   );

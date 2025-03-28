@@ -5,14 +5,13 @@ const iconMail = "https://assinaturas.grovehost.com.br/imagesClientes/hidroparte
 const iconPhone = "https://assinaturas.grovehost.com.br/imagesClientes/hidropartesImg/icon-phone.png"
 const iconAddress = "http://assinaturas.grovehost.com.br/imagesClientes/hidropartesImg/icon-address.png"
 const iconSite = "http://assinaturas.grovehost.com.br/imagesClientes/hidropartesImg/icon-site.png"
-const imgBackground = "https://assinaturas.grovehost.com.br/imagesClientes/hidropartesImg/imgfundo.jpg"
+const imgBackground = "https://assinaturas.grovehost.com.br/imagesClientes/hidropartesImg/imgfundo.webp"
 const logo = "https://assinaturas.grovehost.com.br/imagesClientes/hidropartesImg/Logo.png"
 export const objClient = {
     bg1,
     bg2,
     color1: "#000",
     color2: "#0762C8",
-    colorIcon: "#1b53ec",
     logo,
     iconMail,
     iconWpp,

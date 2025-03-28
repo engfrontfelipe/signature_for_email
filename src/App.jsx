@@ -4,10 +4,11 @@ import styled from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles.tsx';
 import Container from './components/Container';
 import Form from './components/Form/index.tsx';
-import { Button } from './components/Button/index.tsx';
+import { Head } from './components/Head/index.tsx';
 import { objClient } from './styles/variables.tsx';
 
 import {Header, HeaderGrove} from './components/Header/index.tsx';
+import { Button } from './components/Button/index.tsx';
 
 // Estilo para a mensagem de incompatibilidade
 const MobileWarning = styled.div`
@@ -67,13 +68,17 @@ function App() {
   return (
     <>
       <GlobalStyles />
+      <Head>
+        <HeaderGrove src='https://assinaturas.grovehost.com.br/imagesClientes/hidropartesImg/TechnologyPreto.png' />
+        <h1>Gerador de Assinaturas</h1>
+      </Head>
       <Container>
         <div className="aligLogo">
-          <HeaderGrove src='https://assinaturas.grovehost.com.br/imagesClientes/hidropartesImg/TechnologyPreto.png' />
           <Header src={objClient.logo} />
         </div>
         <Form />
       </Container>
+      <Button href='https://grovetech.com.br/' type='submit'>Grove Tech</Button>
     </>
   );
 }

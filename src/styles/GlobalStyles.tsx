@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
 
+
     };
     html{
         background-image: url(${objClient.imgBackground});
@@ -30,12 +31,24 @@ const GlobalStyles = createGlobalStyle`
         }
     }
 
-    .aligLogo{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-        margin-bottom: 20px;
+    .aligLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+    animation: slideFromRight 1.5s ease-out forwards; /* Animação aplicada diretamente */
+}
+
+    @keyframes slideFromRight {
+        from {
+            transform: translateX(100%); /* Começa fora da tela à direita */
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0); /* Termina na posição normal */
+            opacity: 1;
+        }
     }
 
     .swal-signature-container {
