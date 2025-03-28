@@ -1,8 +1,10 @@
 {
   "name": "create_ass_grove",
   "private": true,
+  "homepage": "https://assinaturas.grovehost.com.br/hidroparts",
   "version": "0.0.0",
   "type": "module",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",

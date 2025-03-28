@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { imgBackground } from './variables';
+import { objClient } from './variables';
 const GlobalStyles = createGlobalStyle`
     *{
         font-family: Roboto, sans-serif;
@@ -10,9 +10,12 @@ const GlobalStyles = createGlobalStyle`
     };
 
     body{
-        background-image: url(${imgBackground});
+        background-image: url(${objClient.imgBackground});
         background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
+        height: 90vh;
+        overflow-y: hidden;
         z-index: 0;
         object-fit: cover;
         
@@ -26,6 +29,14 @@ const GlobalStyles = createGlobalStyle`
             background-color: #0000007b;
             z-index: -1;
         }
+    }
+
+    .aligLogo{
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 20px;
     }
 
     .swal-signature-container {

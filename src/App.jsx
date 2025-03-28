@@ -4,7 +4,10 @@ import styled from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles.tsx';
 import Container from './components/Container';
 import Form from './components/Form/index.tsx';
-import Header from './components/Header/index.tsx';
+import { Button } from './components/Button/index.tsx';
+import { objClient } from './styles/variables.tsx';
+
+import {Header, HeaderGrove} from './components/Header/index.tsx';
 
 // Estilo para a mensagem de incompatibilidade
 const MobileWarning = styled.div`
@@ -65,7 +68,10 @@ function App() {
     <>
       <GlobalStyles />
       <Container>
-        <Header src="../src/assets/images/Logo.png"/>
+        <div className="aligLogo">
+          <Header src={objClient.logo} />
+          <HeaderGrove src='https://assinaturas.grovehost.com.br/imagesClientes/hidropartesImg/TechnologyPreto.png' />
+        </div>
         <Form />
       </Container>
     </>

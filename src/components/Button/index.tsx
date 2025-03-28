@@ -1,24 +1,29 @@
 import styled from "styled-components";
-import { colors } from "../../styles/variables";
+import { colors, objClient } from "../../styles/variables";
 
-export const Button = styled.button`
+type Props = { 
+    tipoBotao: "" | "submit"
+} 
 
-    width: 70%;
+export const Button = styled.button<Props>`
     padding: 8px;
     border-radius: 10px;
-    border: none;
+    border: ${(props) => props.tipoBotao === "submit" ? "none" : "2px groove #0762C8" };
     outline: none;
     font-size: 16px;
     margin-top: 8px;
-    background: ${colors.orange}; // Cor sólida inicial
-    color: ${colors.white};
+    background: ${(props) => props.tipoBotao === "submit" ? colors.orange : "transparent"}; 
+    color: ${(props) => props.tipoBotao === "submit" ? colors.white : colors.orange};
     cursor: pointer;
     transition: 1s; // Transição suave para o background: ;
     font-weight: bold;
+    width: 90%;
+    margin-top: 20px;
     
     &:hover {
     background: linear-gradient(to right, ${colors.orange}, ${colors.bluelight}); // Cor degradê ao passar o mouse
-    transition: 1s; // Transição suave para o background: ;
+    transition: 0.1; // Transição suave para o background: ;
+    color: aliceblue;
 
 }
 `;
