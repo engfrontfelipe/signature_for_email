@@ -8,7 +8,7 @@ type Props = {
 export const Button = styled.button<Props>`
     padding: 8px;
     border-radius: 10px;
-    border: ${(props) => props.tipoBotao === "submit" ? "none" : "2px groove #0762C8" };
+    border: ${(props) => props.tipoBotao === "submit" ? "none" : "2px groove #E5843C" };
     outline: none;
     font-size: 16px;
     margin-top: 8px;
@@ -17,7 +17,7 @@ export const Button = styled.button<Props>`
     cursor: pointer;
     transition: 1s; // Transição suave para o background: ;
     font-weight: bold;
-    width: 90%;
+    width: ${(props) => props.tipoBotao === "submit" ? "90%" : "70%"};
     margin-top: 20px;
     
     &:hover {

@@ -23,7 +23,7 @@ export const objClient = {
 }
 
 export const colors = {
-    orange: '#0762C8',
+    orange: '#E5843C',
     bluelight: '#56C5E0',
     white: '#fff',
     black: '#000',

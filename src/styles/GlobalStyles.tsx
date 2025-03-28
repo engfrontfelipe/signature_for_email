@@ -8,8 +8,7 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
 
     };
-
-    body{
+    html{
         background-image: url(${objClient.imgBackground});
         background-size: cover;
         background-position: center;
@@ -33,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
 
     .aligLogo{
         display: flex;
-        align-items: baseline;
+        align-items: center;
         justify-content: center;
         gap: 50px;
         margin-bottom: 20px;

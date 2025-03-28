@@ -282,8 +282,8 @@ const Reset = () => {
           <option value="Av. Carlos Augusto Tinoco Garcia, 419, Riviera Fluminense, Macaé – RJ">Matriz Macaé-RJ</option>
         </Select>
       </Label>
-      <Button tipoBotao='submit' type='submit'>Gerar</Button>
       <Button tipoBotao='' onClick={Reset} type='reset'>Limpar Campos</Button>
+      <Button tipoBotao='submit' type='submit'>Gerar</Button>
       
     </FormStyle>
   );
