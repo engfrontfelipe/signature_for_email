@@ -69,8 +69,8 @@ function App() {
       <GlobalStyles />
       <Container>
         <div className="aligLogo">
-          <Header src={objClient.logo} />
           <HeaderGrove src='https://assinaturas.grovehost.com.br/imagesClientes/hidropartesImg/TechnologyPreto.png' />
+          <Header src={objClient.logo} />
         </div>
         <Form />
       </Container>

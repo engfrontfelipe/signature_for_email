@@ -4,7 +4,7 @@ import { colors } from "../../styles/variables";
 const Container = styled.div`
     max-width: 660px;
     width: 100%;
-    padding: 20px;
+    padding: 40px;
     background-color: ${colors.backgroundForm};
     color: ${colors.orange};
     border-radius: 10px;

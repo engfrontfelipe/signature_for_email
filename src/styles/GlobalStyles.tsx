@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 90vh;
+        height: 85vh;
         overflow-y: hidden;
         z-index: 0;
         object-fit: cover;
