@@ -78,7 +78,7 @@ function App() {
         </div>
         <Form />
       </Container>
-      <Button href='https://grovetech.com.br/' type='submit'>Grove Tech</Button>
+      <Button href='https://grovetech.com.br/' target='blank' type='submit'>Acesse Grove Tech</Button>
     </>
   );
 }

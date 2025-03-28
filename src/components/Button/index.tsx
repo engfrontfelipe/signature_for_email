@@ -39,7 +39,7 @@ export const Button = styled.a`
     background: ${colors.orange};
     color: ${colors.white};
     font-weight: bold;
-    width: 120px;
+    width: 155px;
     margin-top: 20px;
     position: absolute;
     top: 10px;
@@ -47,6 +47,7 @@ export const Button = styled.a`
     scale: 0.9;
     transition: ease 0.4s;
     text-decoration: none;
+    scale: 0.9;
     animation: fadeIn 3s ease-in-out; /* Animação aplicada diretamente */
 
     @keyframes fadeIn {
@@ -61,6 +62,7 @@ export const Button = styled.a`
     &:hover{
         background: linear-gradient(to right, ${colors.orange}, ${colors.bluelight}); // Cor degradê ao passar o mouse
         transition: ease 1s;
+        scale: 1;
 
 
     }
